@@ -1,0 +1,10 @@
+C:\Users\Bhooma.CH\source\repos\TeknionAndQentelliCode\ch-portal-apps\CH.Models\bin\Debug-Dev\netcoreapp3.1\CH.Models.deps.json
+C:\Users\Bhooma.CH\source\repos\TeknionAndQentelliCode\ch-portal-apps\CH.Models\bin\Debug-Dev\netcoreapp3.1\CH.Models.dll
+C:\Users\Bhooma.CH\source\repos\TeknionAndQentelliCode\ch-portal-apps\CH.Models\bin\Debug-Dev\netcoreapp3.1\CH.Models.pdb
+C:\Users\Bhooma.CH\source\repos\TeknionAndQentelliCode\ch-portal-apps\CH.Models\obj\Debug-Dev\netcoreapp3.1\CH.Models.csproj.AssemblyReference.cache
+C:\Users\Bhooma.CH\source\repos\TeknionAndQentelliCode\ch-portal-apps\CH.Models\obj\Debug-Dev\netcoreapp3.1\CH.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Bhooma.CH\source\repos\TeknionAndQentelliCode\ch-portal-apps\CH.Models\obj\Debug-Dev\netcoreapp3.1\CH.Models.AssemblyInfoInputs.cache
+C:\Users\Bhooma.CH\source\repos\TeknionAndQentelliCode\ch-portal-apps\CH.Models\obj\Debug-Dev\netcoreapp3.1\CH.Models.AssemblyInfo.cs
+C:\Users\Bhooma.CH\source\repos\TeknionAndQentelliCode\ch-portal-apps\CH.Models\obj\Debug-Dev\netcoreapp3.1\CH.Models.csproj.CoreCompileInputs.cache
+C:\Users\Bhooma.CH\source\repos\TeknionAndQentelliCode\ch-portal-apps\CH.Models\obj\Debug-Dev\netcoreapp3.1\CH.Models.dll
+C:\Users\Bhooma.CH\source\repos\TeknionAndQentelliCode\ch-portal-apps\CH.Models\obj\Debug-Dev\netcoreapp3.1\CH.Models.pdb

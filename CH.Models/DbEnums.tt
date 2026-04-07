@@ -1,0 +1,188 @@
+<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ Assembly Name="System.Data" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.Data" #>
+<#@ import namespace="System.Data.SqlClient" #>
+<#@ import namespace="System.Text.RegularExpressions" #>
+<#@ output extension=".cs" #>
+/************************************************************
+ * This is an auto-generated source file.                   *
+ * DO NOT EDIT MANUALLY.                                    *
+ * Edit the T4 template that generated this file to modify. *
+ ***********************************************************/
+
+<#
+	//string connectionString = @"Server=172.31.60.93;Initial Catalog=MyPortal_New;Persist Security Info=False;User ID=MyPortal_Dev;Password=PortalDev123!";
+	string connectionString = @"Server=172.31.60.93;Initial Catalog=MyPortal_Dev_Next;Persist Security Info=False;User ID=svc-portal;Password=Portal@cc3ss18!";
+#>
+using System.Linq;
+using System.Text;
+using System.Collections.Generic;
+
+namespace CH.Models.Enums
+{
+<#
+	var conn = new SqlConnection(connectionString);
+	conn.Open();
+
+	string command = "select Id, EnumKey, DisplayName from CodeDefTypes order by DisplayName";
+	var cmd = new SqlCommand(command, conn);
+ 
+	using (var reader = cmd.ExecuteReader())
+	{
+#>
+    #region CodeDefs
+
+    /****************
+     * CodeDefTypes *
+     ****************/
+
+    /// <summary>
+    /// An enumeration of all the available CodeDefTypes.
+    /// </summary>
+    public enum CodeDefTypeId
+    {
+<#
+		while (reader.Read())
+		{
+			string pascalTypeName = Pascalize(reader["EnumKey"]);
+#>
+        /// <summary><#=reader["DisplayName"]#></summary>
+        <#= pascalTypeName #> = <#= reader["Id"] #>,
+<#
+		}
+#>
+    }
+
+
+    /************
+     * CodeDefs *
+     ************/
+
+<#
+	}
+
+	// Create the individual enums for each CodeDefTypeID
+
+	command = @"
+select cdt.EnumKey as TypeKey, cdt.DisplayName as TypeDisplay,
+	cd.EnumKey as CodeKey, cd.DisplayName as CodeDisplay, cd.Id as Id
+from dbo.CodeDefs cd
+	inner join dbo.CodeDefTypes cdt on cd.CodeDefTypeID = cdt.ID
+order by cdt.DisplayName, cd.DisplayName";
+	cmd = new SqlCommand(command, conn);
+ 
+	string currentType = string.Empty;
+	using (var reader = cmd.ExecuteReader())
+	{
+		while (reader.Read())
+		{
+			string pascalTypeKey = Pascalize(reader["TypeKey"]);
+			if (!string.IsNullOrWhiteSpace(currentType) && pascalTypeKey != currentType)
+			{
+#>
+    }
+
+<#
+			}
+			if (pascalTypeKey != currentType)
+			{
+#>
+    public enum <#= pascalTypeKey #>
+    {
+<#
+				currentType = pascalTypeKey;
+			}
+#>
+        /// <summary><#=reader["CodeDisplay"]#></summary>
+        <#= Pascalize(reader["CodeKey"]) #> = <#= reader["Id"] #>,
+<#
+		}
+	}
+
+if (!string.IsNullOrWhiteSpace(currentType)) {
+#>
+    }
+<#
+}
+#>
+
+    #endregion // CodeDefs
+
+		
+    #region Identity
+
+    /********************
+     * ApplicationRoles *
+     ********************/
+
+    /// <summary>
+    /// An enumeration of all the available application roles.
+    /// </summary>
+    public enum ApplicationRoleId
+    {
+<#
+	conn = new SqlConnection(connectionString);
+	conn.Open();
+
+	command = "select Id, NormalizedName, Name DisplayName from AspNetRoles;";
+	cmd = new SqlCommand(command, conn);
+ 
+	using (var reader = cmd.ExecuteReader())
+	{
+		while (reader.Read())
+		{
+			string pascalTypeName = Pascalize(reader["NormalizedName"]);
+#>
+        /// <summary><#=reader["DisplayName"]#></summary>
+        <#= pascalTypeName #> = <#= reader["Id"] #>,
+<#
+		}
+	}
+#>
+    }
+
+    /// <summary>
+    /// An static class of all the available application roles.
+    /// </summary>
+    public static class ApplicationRole
+    {
+<#
+	conn = new SqlConnection(connectionString);
+	conn.Open();
+
+	command = "select Id, NormalizedName, Name DisplayName from AspNetRoles;";
+	cmd = new SqlCommand(command, conn);
+ 
+	using (var reader = cmd.ExecuteReader())
+	{
+		while (reader.Read())
+		{
+			string pascalTypeName = Pascalize(reader["NormalizedName"]);
+#>
+        /// <summary><#=reader["DisplayName"]#></summary>
+        public static readonly string <#= pascalTypeName #> = "<#= reader["NormalizedName"] #>";
+<#
+		}
+	}
+#>
+    }
+
+    #endregion
+}
+
+<#+
+	private string Pascalize(object value)
+	{
+		Regex rx = new Regex(@"(?:[^a-zA-Z0-9]*)(?<first>[a-zA-Z0-9])(?<reminder>[a-zA-Z0-9]*)(?:[^a-zA-Z0-9]*)");
+		string returnValue = rx.Replace(value.ToString(), m => m.Groups["first"].ToString().ToUpper() + m.Groups["reminder"].ToString());
+		if(returnValue.Length != 0 && "0123456789".IndexOf(returnValue.Substring(0,1)) >= 0)
+		{
+			returnValue = "_" + returnValue;
+		}
+		return returnValue;
+	}
+#>

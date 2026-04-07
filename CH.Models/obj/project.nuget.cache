@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "K6W9h08Q1PKhktYXlsFoERlJP5B3jNsQ3TSOEyZnK9vcSBbI/DG5uJETmvLZzVwV0dn9bu828OQ0+3Zs10840A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Bhooma.CH\\source\\repos\\TeknionAndQentelliCode\\ch-portal-apps\\CH.Models\\CH.Models.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Bhooma.CH\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.8\\microsoft.aspnetcore.http.features.5.0.8.nupkg.sha512",
+    "C:\\Users\\Bhooma.CH\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
+    "C:\\Users\\Bhooma.CH\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\Bhooma.CH\\.nuget\\packages\\system.io.pipelines\\5.0.1\\system.io.pipelines.5.0.1.nupkg.sha512",
+    "C:\\Users\\Bhooma.CH\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
