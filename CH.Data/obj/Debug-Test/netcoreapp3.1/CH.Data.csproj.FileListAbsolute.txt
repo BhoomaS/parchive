@@ -1,0 +1,15 @@
+C:\Users\Bhooma.CH\source\repos\TeknionAndQentelliCode\ch-portal-apps\CH.Data\bin\Debug-Test\netcoreapp3.1\CH.Data.deps.json
+C:\Users\Bhooma.CH\source\repos\TeknionAndQentelliCode\ch-portal-apps\CH.Data\bin\Debug-Test\netcoreapp3.1\CH.Data.dll
+C:\Users\Bhooma.CH\source\repos\TeknionAndQentelliCode\ch-portal-apps\CH.Data\bin\Debug-Test\netcoreapp3.1\CH.Data.pdb
+C:\Users\Bhooma.CH\source\repos\TeknionAndQentelliCode\ch-portal-apps\CH.Data\bin\Debug-Test\netcoreapp3.1\CH.Entities.dll
+C:\Users\Bhooma.CH\source\repos\TeknionAndQentelliCode\ch-portal-apps\CH.Data\bin\Debug-Test\netcoreapp3.1\CH.Models.dll
+C:\Users\Bhooma.CH\source\repos\TeknionAndQentelliCode\ch-portal-apps\CH.Data\bin\Debug-Test\netcoreapp3.1\CH.Entities.pdb
+C:\Users\Bhooma.CH\source\repos\TeknionAndQentelliCode\ch-portal-apps\CH.Data\bin\Debug-Test\netcoreapp3.1\CH.Models.pdb
+C:\Users\Bhooma.CH\source\repos\TeknionAndQentelliCode\ch-portal-apps\CH.Data\obj\Debug-Test\netcoreapp3.1\CH.Data.csproj.AssemblyReference.cache
+C:\Users\Bhooma.CH\source\repos\TeknionAndQentelliCode\ch-portal-apps\CH.Data\obj\Debug-Test\netcoreapp3.1\CH.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Bhooma.CH\source\repos\TeknionAndQentelliCode\ch-portal-apps\CH.Data\obj\Debug-Test\netcoreapp3.1\CH.Data.AssemblyInfoInputs.cache
+C:\Users\Bhooma.CH\source\repos\TeknionAndQentelliCode\ch-portal-apps\CH.Data\obj\Debug-Test\netcoreapp3.1\CH.Data.AssemblyInfo.cs
+C:\Users\Bhooma.CH\source\repos\TeknionAndQentelliCode\ch-portal-apps\CH.Data\obj\Debug-Test\netcoreapp3.1\CH.Data.csproj.CoreCompileInputs.cache
+C:\Users\Bhooma.CH\source\repos\TeknionAndQentelliCode\ch-portal-apps\CH.Data\obj\Debug-Test\netcoreapp3.1\CH.Data.csproj.CopyComplete
+C:\Users\Bhooma.CH\source\repos\TeknionAndQentelliCode\ch-portal-apps\CH.Data\obj\Debug-Test\netcoreapp3.1\CH.Data.dll
+C:\Users\Bhooma.CH\source\repos\TeknionAndQentelliCode\ch-portal-apps\CH.Data\obj\Debug-Test\netcoreapp3.1\CH.Data.pdb
